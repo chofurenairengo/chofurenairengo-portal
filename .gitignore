@@ -1,0 +1,24 @@
+.DS_Store
+.idea/
+.vscode/
+
+node_modules/
+dist/
+build/
+.next/
+coverage/
+.nyc_output/
+
+*.log
+*.tmp
+*.swp
+*.swo
+__pycache__/
+
+.env
+.env.*
+!.env.example
+
+# Local prototype scratch file
+portal-prototype.html
+.vercel

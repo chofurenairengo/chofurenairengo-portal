@@ -1,0 +1,370 @@
+:root {
+  --bg: #ffd4ef;
+  --bg-2: #fbc6ff;
+  --bg-3: #c8ecff;
+  --card: #fff6fc;
+  --line: #1c1122;
+  --line-strong: #0f0914;
+  --text: #1a0c1a;
+  --muted: #5d3654;
+  --brand: #ff3f9a;
+  --brand-2: #ff7bbf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial Rounded MT Bold", "Hiragino Maru Gothic ProN", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", sans-serif;
+  background: radial-gradient(circle at 15% 12%, #ffe8f7 0%, transparent 48%),
+    radial-gradient(circle at 76% 74%, #ffe0f5 0%, transparent 48%),
+    linear-gradient(140deg, var(--bg-3), var(--bg), var(--bg-2));
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid var(--line-strong);
+  z-index: 20;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: #ffffff;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 8px 14px;
+  box-shadow: 2px 2px 0 var(--line-strong);
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.menu a {
+  color: var(--text);
+  text-decoration: none;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: #fff4fb;
+  box-shadow: 1.5px 1.5px 0 var(--line);
+  padding: 5px 10px;
+  font-weight: 800;
+  transition: transform 120ms ease;
+}
+
+.menu a:hover {
+  transform: translate(-1px, -1px);
+}
+
+main.portal-main {
+  width: min(1100px, 92%);
+  margin: 18px auto 0;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 30px;
+  border: 2px solid var(--line-strong);
+  box-shadow: 4px 4px 0 var(--line-strong);
+}
+
+main.portal-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: min(62vw, 700px);
+  background-image: url("/images/renai-title.jpg");
+  background-size: 120% 100%;
+  background-position: left center;
+  z-index: 0;
+}
+
+main.portal-main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: min(34vw, 380px);
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 245, 252, 0.9) 26%,
+    rgba(255, 234, 247, 0.98) 45%,
+    rgba(255, 234, 247, 1) 100%
+  );
+  z-index: 1;
+}
+
+.hero,
+#products,
+#contact {
+  position: relative;
+  z-index: 2;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.hero {
+  min-height: min(58vw, 640px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 30px;
+  padding-bottom: min(18vw, 180px);
+}
+
+.badge {
+  display: inline-block;
+  border: 3px solid #ffffff;
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  color: #fff;
+  background: #1a0b20cc;
+  box-shadow: 4px 4px 0 #ffffff55;
+  font-weight: 800;
+  width: fit-content;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  margin: 14px 0 10px;
+  line-height: 1.2;
+  font-weight: 900;
+  max-width: 18ch;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  text-shadow: 2px 2px 0 #ff4cb2, 5px 5px 0 rgba(0, 0, 0, 0.42);
+}
+
+.lead {
+  max-width: 68ch;
+  color: #fff6ff;
+  font-weight: 700;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.cta {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 1.5px solid var(--line-strong);
+  background: #fff;
+  color: var(--text);
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--line-strong);
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+
+.btn:hover {
+  background: #fff4fa;
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--line-strong);
+}
+
+.btn.primary {
+  background: linear-gradient(120deg, var(--brand), var(--brand-2));
+  color: #240319;
+}
+
+section {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+h2 {
+  font-size: 27px;
+  margin: 0 0 10px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.products {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  border: 1.5px solid var(--line-strong);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 3px 3px 0 var(--line-strong);
+}
+
+.card h3 {
+  margin-top: 4px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+#contact {
+  margin-top: 8px;
+}
+
+main.detail-main {
+  width: min(1100px, 92%);
+  margin: 18px auto 0;
+  border-radius: 22px;
+  padding: 24px 20px 30px;
+  border: 2px solid var(--line-strong);
+  box-shadow: 4px 4px 0 var(--line-strong);
+  background: #fff6fc;
+}
+
+.detail-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.detail-title {
+  margin: 10px 0 8px;
+  color: var(--text);
+  text-shadow: none;
+  max-width: none;
+}
+
+.detail-description {
+  margin: 0;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chip {
+  border: 1.5px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: #fff;
+  box-shadow: 1.5px 1.5px 0 var(--line-strong);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.panel-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.list li {
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+footer {
+  padding: 28px 0 40px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+
+  main.portal-main::before {
+    height: 66vh;
+    background-size: 140% 100%;
+    background-position: left center;
+  }
+
+  main.portal-main::after {
+    top: 40vh;
+  }
+
+  .hero {
+    min-height: 62vh;
+    padding-bottom: 20vh;
+  }
+}
