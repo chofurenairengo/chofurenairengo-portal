@@ -1,20 +1,31 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getProductBySlug } from "@/lib/products";
 
-export async function generateMetadata({ params }) {
-  const product = await getProductBySlug(params.slug);
+type ProductPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({
+  params,
+}: ProductPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
   if (!product) {
     return { title: "プロダクトが見つかりません | 調布恋AI連合" };
   }
   return {
     title: `${product.name} | 調布恋AI連合`,
-    description: product.oneLiner
+    description: product.oneLiner,
   };
 }
 
-export default async function ProductDetailPage({ params }) {
-  const product = await getProductBySlug(params.slug);
+export default async function ProductDetailPage({
+  params,
+}: ProductPageProps) {
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
   if (!product) {
     notFound();
   }
@@ -36,7 +47,12 @@ export default async function ProductDetailPage({ params }) {
           <Link className="back-link" href="/#products">
             ← 一覧へ戻る
           </Link>
-          <a className="btn" href={product.github} target="_blank" rel="noopener noreferrer">
+          <a
+            className="btn"
+            href={product.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub
           </a>
         </div>
@@ -66,10 +82,20 @@ export default async function ProductDetailPage({ params }) {
           <article className="card">
             <h2 className="panel-title">リンク</h2>
             <div className="product-actions">
-              <a className="btn" href={product.link} target="_blank" rel="noopener noreferrer">
+              <a
+                className="btn"
+                href={product.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Link
               </a>
-              <a className="btn primary" href={product.github} target="_blank" rel="noopener noreferrer">
+              <a
+                className="btn primary"
+                href={product.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub
               </a>
             </div>
@@ -77,7 +103,9 @@ export default async function ProductDetailPage({ params }) {
         </section>
       </main>
 
-      <footer className="container">© {new Date().getFullYear()} 調布恋AI連合</footer>
+      <footer className="container">
+        © {new Date().getFullYear()} 調布恋AI連合
+      </footer>
     </>
   );
 }

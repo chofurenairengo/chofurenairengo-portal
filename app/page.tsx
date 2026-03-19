@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getProducts } from "@/lib/products";
 
 export default async function HomePage() {
@@ -19,7 +18,7 @@ export default async function HomePage() {
       <main className="portal-main">
         <section className="hero">
           <span className="badge">Portal</span>
-          <h1>調布恋AI連合の\nプロダクト</h1>
+          <h1>調布恋AI連合の<br />プロダクト</h1>
           <div className="cta">
             <a className="btn primary" href="#products">
               プロダクトを見る
@@ -37,9 +36,9 @@ export default async function HomePage() {
                 <h3>{product.name}</h3>
                 <p>{product.oneLiner}</p>
                 <div className="product-actions">
-                  <Link className="btn" href={`/product/${product.slug}`}>
+                  <a className="btn" href={product.link} target="_blank" rel="noopener noreferrer">
                     Link
-                  </Link>
+                  </a>
                   <a className="btn primary" href={product.github} target="_blank" rel="noopener noreferrer">
                     GitHub
                   </a>
