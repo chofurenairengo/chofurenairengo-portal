@@ -2,23 +2,37 @@
   {
     "id": "renai",
     "slug": "renai",
-    "name": "renai",
-    "oneLiner": "恋愛文脈に特化した対話・提案支援",
-    "description": "恋愛の悩み相談や会話練習に特化した対話体験を提供し、次の行動を具体化するプロダクトです。",
+    "name": "恋AI(renai)",
+    "oneLiner": "AIと会話して、異性とのコミュニケーションを練習しよう",
+    "description": "恋AIは、AIとの3Dリアルタイム会話を通じて、実践的なコミュニケーション力を養うWebアプリケーションです。理工系学生に多い「経験不足」や「客観視できない課題」に対して、繰り返し練習できる環境を提供します。学生最大級のハッカソン、JPHacksで様々な賞を受賞。",
     "targets": ["恋愛相談をしたい個人", "会話練習をしたいユーザー"],
     "features": ["会話シミュレーション", "状況別アドバイス", "継続的な振り返り"],
     "link": "https://renailove.vercel.app",
-    "github": "https://github.com/chofurenairengo/renai"
+    "github": "https://github.com/chofurenairengo/renai",
+    "image": "/images/renai.png"
   },
   {
     "id": "emotion-readar",
     "slug": "emotion-readar",
-    "name": "emotion-readar",
-    "oneLiner": "感情傾向を可視化するリーダー",
-    "description": "会話やテキストから感情の変化を読み取り、自己理解や対話改善につなげるプロダクトです。",
+    "name": "emotion-readar(era)",
+    "oneLiner": "集団会話の孤立を、リアルタイムで支援する",
+    "description": "ERAは、スマートグラスとAIを用いて対面の集団会話をリアルタイムに解析し、発言のきっかけとなるキーワードを提示するシステムです。「何を話すか」と「いつ話すか」の両方を支援することで、会話に参加できる成功体験を生み出し、自信の獲得につなげます。現在、未踏プロジェクトに挑戦中。",
     "targets": ["感情の変化を記録したい個人", "対話品質を改善したいチーム"],
     "features": ["感情トレンドの可視化", "時系列での比較", "状況に応じたインサイト表示"],
     "link": "https://zenn.dev/miyabi206/articles/5d73fdba36c75e",
-    "github": "https://github.com/chofurenairengo/emotion-readar"
+    "github": "https://github.com/chofurenairengo/emotion-readar",
+    "image": "/images/era.jpg"
+  },
+  {
+    "id": "saeboku",
+    "slug": "saeboku",
+    "name": "冴えない僕でも彼女が欲しい",
+    "oneLiner": "調布恋AI連合が送る、架空の大学UEDで長く続けられる群青劇。",
+    "description": "Meta Quest VR +デスクトップブラウザ対応の体験型VR ビジュアルノベル。音声会話でヒロイン・ジェニファーと対話する、レトロ/パステルかわいい美学（Windows 95 風UI、ピンク・紫系パレット）の恋愛アドベンチャー。",
+    "targets": ["恋愛に自信がない個人", "コミュニケーションを練習したい人"],
+    "features": ["シナリオ型コーチング", "段階的なフィードバック", "自信づけのサポート"],
+    "link": "https://saeboku.com/",
+    "github": "https://github.com/chofurenairengo/saeboku",
+    "image": "/images/saegi.png"
   }
 ]

@@ -11,6 +11,7 @@ export interface Product {
   features: string[];
   link: string;
   github: string;
+  image?: string;
 }
 
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -69,6 +70,19 @@ const fallbackProducts: Product[] = [
     ],
     link: "https://zenn.dev/miyabi206/articles/5d73fdba36c75e",
     github: "https://github.com/chofurenairengo/emotion-readar",
+  },
+  {
+    id: "saeboku",
+    slug: "saeboku",
+    name: "冴えない僕でも彼女が欲しい",
+    oneLiner: "コミュ力に自信がない人のための恋愛コーチング",
+    description:
+      "コミュニケーションが苦手な人でも一歩踏み出せるよう、恋愛シナリオを通じて実践的なコーチングを提供するプロダクトです。",
+    targets: ["恋愛に自信がない個人", "コミュニケーションを練習したい人"],
+    features: ["シナリオ型コーチング", "段階的なフィードバック", "自信づけのサポート"],
+    link: "https://github.com/chofurenairengo/saeboku",
+    github: "https://github.com/chofurenairengo/saeboku",
+    image: "/images/saegi.png",
   },
 ];
 
