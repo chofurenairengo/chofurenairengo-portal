@@ -7,7 +7,7 @@
     "description": "恋AIは、AIとの3Dリアルタイム会話を通じて、実践的なコミュニケーション力を養うWebアプリケーションです。理工系学生に多い「経験不足」や「客観視できない課題」に対して、繰り返し練習できる環境を提供します。学生最大級のハッカソン、JPHacksで様々な賞を受賞。",
     "targets": ["恋愛相談をしたい個人", "会話練習をしたいユーザー"],
     "features": ["会話シミュレーション", "状況別アドバイス", "継続的な振り返り"],
-    "link": "https://renailove.vercel.app",
+    "link": "https://chofurenai.com/",
     "github": "https://github.com/chofurenairengo/renai",
     "image": "/images/renai.png"
   },
